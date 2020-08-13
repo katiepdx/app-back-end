@@ -20,31 +20,41 @@ describe('app routes', () => {
     return client.end(done);
   });
 
-  test('returns animals', async() => {
+  test('returns dogs', async() => {
 
     const expectation = [
       {
-        'id': 1,
-        'name': 'bessie',
-        'coolfactor': 3,
-        'owner_id': 1
+        name: 'Cookie',
+        id: 1,
+        age_years: 3,
+        is_adopted: true,
+        size: 'small'
       },
       {
-        'id': 2,
-        'name': 'jumpy',
-        'coolfactor': 4,
-        'owner_id': 1
+        name: 'Jonan',
+        id: 2,
+        age_years: 4,
+        is_adopted: true,
+        size: 'small'
       },
       {
-        'id': 3,
-        'name': 'spot',
-        'coolfactor': 10,
-        'owner_id': 1
+        name: 'Lulu',
+        id: 3,
+        age_years: 4,
+        is_adopted: true,
+        size: 'small'
+      },
+      {
+        name: 'Logan',
+        id: 4,
+        age_years: 5,
+        is_adopted: true,
+        size: 'small'
       }
     ];
 
     const data = await fakeRequest(app)
-      .get('/animals')
+      .get('/dogs')
       .expect('Content-Type', /json/)
       .expect(200);
 
