@@ -22,7 +22,7 @@ async function run() {
                     id INTEGER NOT NULL,
                     ageYears INTEGER NOT NULL,
                     isAdopted BOOLEAN NOT NULL,
-                    size VARCHAR(20) NOT NULL
+                    size VARCHAR(20) NOT NULL REFERENCES users(id)
             );
         `);
 
