@@ -20,8 +20,8 @@ async function run() {
                 CREATE TABLE dogs (
                     name VARCHAR(20) NOT NULL,
                     id INTEGER NOT NULL,
-                    ageYears INTEGER NOT NULL,
-                    isAdopted BOOLEAN NOT NULL,
+                    age_years INTEGER NOT NULL,
+                    is_adopted BOOLEAN NOT NULL,
                     size VARCHAR(20) NOT NULL REFERENCES users(id)
             );
         `);
