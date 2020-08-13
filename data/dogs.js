@@ -1,30 +1,26 @@
 module.exports = [
   {
     name: 'Cookie',
-    id: 1,
     age_years: 3,
-    is_adopted: true,
-    size: 'small'
+    size: 'small',
+    is_adopted: true
   },
   {
     name: 'Jonan',
-    id: 2,
     age_years: 4,
-    is_adopted: true,
-    size: 'small'
+    size: 'small',
+    is_adopted: true
   },
   {
     name: 'Lulu',
-    id: 3,
     age_years: 4,
-    is_adopted: true,
-    size: 'small'
+    size: 'small',
+    is_adopted: true
   },
   {
     name: 'Logan',
-    id: 4,
     age_years: 5,
-    is_adopted: true,
-    size: 'small'
+    size: 'small',
+    is_adopted: true
   }
 ];

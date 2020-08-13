@@ -18,11 +18,12 @@ async function run() {
                     hash VARCHAR(512) NOT NULL
                 );           
                 CREATE TABLE dogs (
+                    id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(20) NOT NULL,
-                    id INTEGER NOT NULL,
                     age_years INTEGER NOT NULL,
+                    size VARCHAR(20) NOT NULL,
                     is_adopted BOOLEAN NOT NULL,
-                    size VARCHAR(20) NOT NULL
+                    owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
 
