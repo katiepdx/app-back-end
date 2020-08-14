@@ -17,14 +17,18 @@ async function run() {
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
                 );           
+                CREATE TABLE sizes (
+                    id SERIAL PRIMARY KEY,
+                    size VARCHAR(20) NOT NULL 
+                );
                 CREATE TABLE dogs (
-                    id SERIAL PRIMARY KEY NOT NULL,
+                    id SERIAL PRIMARY KEY,
                     name VARCHAR(20) NOT NULL,
                     age_years INTEGER NOT NULL,
-                    size VARCHAR(20) NOT NULL,
                     is_adopted BOOLEAN NOT NULL,
-                    owner_id INTEGER NOT NULL REFERENCES users(id)
-            );
+                    owner_id INTEGER NOT NULL REFERENCES users(id),
+                    size_id INTEGER NOT NULL REFERENCES sizes(id)
+                );
         `);
 
     console.log('create tables complete', getEmoji(), getEmoji(), getEmoji());
